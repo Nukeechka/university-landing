@@ -4,16 +4,31 @@
   padding: 0;
   color: #222;
 }
+
+html {
+  scroll-behavior: smooth;
+}
 body {
-  background-color: #eee;
+  background-color: #f3f3f3;
 }
 
 a {
   text-decoration: none;
 }
 
+a.anchor {
+  position: relative;
+  top: -100px;
+  visibility: hidden;
+  display: block;
+}
+
 #header {
   border-bottom: 1px solid #222;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  background-color: #f3f3f3;
 }
 
 .container {
@@ -52,8 +67,6 @@ a {
   border-bottom: none;
   border-top: none;
   border-right: none;
-  transition: ease-in;
-  transition-duration: 200ms;
 }
 
 .nav__item > a {
@@ -89,12 +102,12 @@ a {
 
 .banner__image img {
   width: 100%;
-  transition: ease-in;
+  /* transition: ease-in; */
   transition-duration: 200ms;
 }
 
 .banner__image img:hover {
-  box-shadow: -10px 10px 0px #111;
+  box-shadow: -10px 10px 0px #333;
   transform: translate(4px, -4px);
 }
 
@@ -110,11 +123,13 @@ a {
   font-size: 48px;
   margin-bottom: 24px;
   color: #750014;
+  font-family: "Alike";
 }
 
 .banner__subtext {
   opacity: 0.75;
   font-size: 16px;
+  font-weight: 500;
 }
 
 .banner__text {
@@ -131,11 +146,206 @@ a {
   width: 200px;
   font-weight: 500;
   font-size: 20px;
-  transition: ease-in;
+  /* transition: ease-in; */
   transition-duration: 200ms;
+  cursor: pointer;
 }
 
 .btn:hover {
-  box-shadow: -10px 10px 0px #111;
+  box-shadow: -10px 10px 0px #333;
   transform: translate(4px, -4px);
+}
+
+#about {
+  border: 1px solid #222;
+  border-top: none;
+}
+
+.wrapper.about {
+  border: 1px solid #222;
+  padding: 0 20px;
+  padding-top: 75px;
+  padding-bottom: 35px;
+  border-top: none;
+  display: block;
+  border-bottom: none;
+}
+
+.about__info {
+  display: flex;
+  flex: auto;
+  flex-wrap: nowrap;
+  gap: 80px;
+  padding: 25px 0;
+}
+
+.about__title {
+  flex-basis: 700px;
+  color: #750014;
+  font-size: 36px;
+  font-family: "Alike";
+}
+
+.about__text span {
+  border-bottom: 1px solid #750014;
+}
+
+.about__text {
+  font-weight: 500;
+}
+
+.values {
+  display: block;
+}
+
+.about__values {
+  background-color: #e7dede;
+  border-radius: 5px;
+  /* padding: 20px; */
+  margin-bottom: 40px;
+  overflow: hidden;
+  /* transition: ease-in; */
+  transition-duration: 200ms;
+}
+
+.about__values:hover {
+  box-shadow: -10px 10px 0px #333;
+  transform: translate(4px, -4px);
+}
+
+.values__title {
+  background-color: #750014;
+  padding: 20px;
+  color: #f2f2f2;
+  font-size: 20px;
+  font-family: "Alike";
+}
+
+.values__text {
+  padding: 20px;
+  font-size: 16px;
+  color: #222;
+  opacity: 0.9;
+}
+section#entrance {
+  border-bottom: 1px solid #222;
+}
+
+.wrapper.entrance {
+  padding: 75px 20px;
+  display: block;
+  border: 1px solid #222;
+  border-bottom: none;
+  border-top: none;
+}
+
+.entrance__list {
+  margin-top: 40px;
+  display: flex;
+  list-style-type: none;
+  gap: 40px;
+  flex: auto;
+}
+
+.entrance__item {
+  padding: 50px;
+  border: 1px solid #222;
+  /* width: 100%; */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  transition: 200ms;
+}
+
+.entrance__item:hover {
+  box-shadow: -10px 10px 0px #333;
+  transform: translate(4px, -4px);
+}
+
+.entrance__number {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: block;
+  padding: 5px;
+  background-color: #750014;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  color: #f2f2f2;
+}
+
+.entrance__wrapper {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#studentLife {
+  border-bottom: 1px solid #222;
+}
+
+.wrapper.life {
+  padding: 75px 20px;
+  display: block;
+  border: 1px solid #222;
+  border-top: none;
+  border-bottom: none;
+}
+
+.life__text {
+  margin-top: 40px;
+  font-size: 20px;
+}
+
+.subtext {
+  display: flex;
+  /* flex: 1; */
+  gap: 200px;
+  justify-content: space-between;
+  margin-top: 40px;
+  align-items: center;
+}
+
+.subtext__img {
+  flex-basis: 2000px;
+  width: 100%;
+}
+
+.subtext__img img {
+  width: 100%;
+  border-radius: 5px;
+  transition: 200ms;
+}
+
+.subtext__img img:hover {
+  box-shadow: -10px 10px 0px #333;
+  transform: translate(4px, -4px);
+}
+
+.gallery {
+  margin-top: 40px;
+  display: flex;
+  gap: 40px;
+}
+.gallery img {
+  width: 100%;
+  border-radius: 5px;
+  transition: 200ms;
+}
+
+.gallery img:hover {
+  box-shadow: -10px 10px 0px #333;
+  transform: translate(4px, -4px);
+}
+
+.wrapper.contacts {
+  padding: 75px 20px;
+  justify-content: flex-start;
+}
+
+.about__title.contacts {
+  flex-basis: 475px;
 }
